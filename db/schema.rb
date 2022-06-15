@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_15_202052) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_15_202836) do
   create_table "match_profiles", force: :cascade do |t|
     t.string "name"
     t.integer "age"
@@ -31,6 +31,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_15_202052) do
     t.string "name"
     t.integer "age"
     t.string "location"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "question_text"
+    t.string "question_category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "sessions", force: :cascade do |t|
