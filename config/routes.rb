@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :match_profiles
+  # TODO: determine what homepage will be
+  # root to: "home#index"
+  resources :profiles
+  resources :users, except: [:new]
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  # TODO: create a pages model?
+  # get 'about', to: 'pages#about'
+  get 'signup', to: 'users#new'
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 end

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Match profiles</h1>
+
+<div id="match_profiles">
+  <% @match_profiles.each do |match_profile| %>
+    <%= render match_profile %>
+    <p>
+      <%= link_to "Show this match profile", match_profile %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New match profile", new_match_profile_path %>

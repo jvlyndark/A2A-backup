@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @match_profile %>
+
+<div>
+  <%= link_to "Edit this match profile", edit_match_profile_path(@match_profile) %> |
+  <%= link_to "Back to match profiles", match_profiles_path %>
+
+  <%= button_to "Destroy this match profile", @match_profile, method: :delete %>
+</div>
