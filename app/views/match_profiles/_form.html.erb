@@ -1,0 +1,17 @@
+<%= form_with(model: match_profile) do |form| %>
+  <% if match_profile.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(match_profile.errors.count, "error") %> prohibited this match_profile from being saved:</h2>
+
+      <ul>
+        <% match_profile.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
