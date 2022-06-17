@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
+  root 'homepage#index'
   resources :match_profiles
-  # TODO: determine what homepage will be
-  # root to: "profiles#index"
   resources :profiles
   resources :users, except: [:new]
 

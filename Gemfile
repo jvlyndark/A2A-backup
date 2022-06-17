@@ -68,4 +68,4 @@ group :development do
 end
 
 # Webpacker
-gem 'webpacker', '~> 5.x'
+gem 'webpacker'
